@@ -63,16 +63,20 @@ public class HandleXml {
                             country = text;
                         }
 
-                        else if(name.equals("learningState")){
+                        else if(name.equals("output")){
                             humidity = myParser.getAttributeValue(null,"value");
+                            humidity = text;
+                        }
+
+                        else if(name.equals("learningState")){
+                            pressure = myParser.getAttributeValue(null,"value");
+                            pressure = text;
+
                         }
 
                         else if(name.equals("stateTransition")){
-                            pressure = myParser.getAttributeValue(null,"value");
-                        }
-
-                        else if(name.equals("outputRecomendation")){
                             temperature = myParser.getAttributeValue(null,"value");
+                            temperature = text;
                         }
 
                         else{
