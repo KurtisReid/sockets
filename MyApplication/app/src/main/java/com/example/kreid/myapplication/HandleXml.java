@@ -59,18 +59,18 @@ public class HandleXml {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if(name.equals("input")){
+                        if(name.equals("inputKnowledgeItems")){
                             country = text;
                         }
 
-                        else if(name.equals("output")){
+                        else if(name.equals("outputKnowledgeItems")){
                             humidity = myParser.getAttributeValue(null,"value");
                             humidity = text;
                         }
 
-                        else if(name.equals("learningState")){
+                        else if(name.equals("learningStates")){
                             pressure = myParser.getAttributeValue(null,"value");
-                            pressure = text;
+                            //pressure = text;
 
                         }
 

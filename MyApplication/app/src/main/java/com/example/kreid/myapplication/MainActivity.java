@@ -24,7 +24,8 @@ import android.widget.Toast;
 //com.example.sairamkrishna.myapplication
 
 public class MainActivity extends ActionBarActivity {
-    EditText ed1,ed2,ed3,ed4,ed5;
+    TextView ed1,ed2,ed3,ed4,ed5;
+    TextView tv;
 
     private String url1 = "http://kurtisreid.github.io/";
     private String url2 = "LFST.xml";
@@ -36,11 +37,11 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         b1=(Button)findViewById(R.id.button);
 
-        ed1=(EditText)findViewById(R.id.editText);
-        ed2=(EditText)findViewById(R.id.editText2);
-        ed3=(EditText)findViewById(R.id.editText3);
-        ed4=(EditText)findViewById(R.id.editText4);
-        ed5=(EditText)findViewById(R.id.editText5);
+        ed1=(TextView)findViewById(R.id.editText);
+        ed2=(TextView)findViewById(R.id.editText2);
+        ed3=(TextView)findViewById(R.id.editText3);
+        tv=(TextView)findViewById(R.id.editText4);
+        ed5=(TextView)findViewById(R.id.editText5);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
                 while(obj.parsingComplete);
                 ed2.setText(obj.getCountry());
                 ed3.setText(obj.getTemperature());
-                ed4.setText(obj.getHumidity());
+                tv.setText(obj.getHumidity());
                 ed5.setText(obj.getPressure());
             }
         });
